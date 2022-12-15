@@ -1,20 +1,20 @@
-import React from 'react'
-import { Card, CardContent, CardActions, Divider } from '@mui/material'
-import { Link } from 'react-router-dom'
-import cars from '../cars.json' // remove this
+import React from 'react';
+import { Card, CardContent, CardActions, Divider } from '@mui/material';
+import { Link } from 'react-router-dom';
+// import cars from '../cars.json' // remove this
 
 const Home = (props) => {
     return (
-        <div className="card-container">
+        <div className='card-container'>
             {/* Change cars to props.cars and remove the cars.json import above */}
             {props.cars.map((car, idx) => (
-                <Card key={idx} className="card">
-                    <CardContent className="text-gray">
+                <Card key={idx} className='card'>
+                    <CardContent className='text-gray'>
                         <span>{car.name.toUpperCase()}</span>
                         <ul>
-                        <li>Miles per Gallon: {car["mpg"]}</li>
-                        <li>Cylinders: {car["cylinders"]}</li>
-                        <li>Horsepower: {car["horsepower"]}</li>
+                            <li>Miles per Gallon: {car['mpg']}</li>
+                            <li>Cylinders: {car['cylinders']}</li>
+                            <li>Horsepower: {car['horsepower']}</li>
                         </ul>
                     </CardContent>
                     <Divider />
@@ -24,7 +24,7 @@ const Home = (props) => {
                 </Card>
             ))}
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
